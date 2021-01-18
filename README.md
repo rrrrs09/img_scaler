@@ -2,9 +2,16 @@
 
 ### Установка зависимостей
 
+Создать виртуальное окружение
+
+    python3 -m venv venv
+    source venv/bin/activate
+
+Установить зависимоти
+
     pip install -r requirements.txt
 
-или
+или использовать pipenv
 
     pipenv install --ignore-pipfile
 
