@@ -1,0 +1,15 @@
+{% extends 'scaler/base.html' %}
+
+{% block content %}
+<h1>Список изображений</h1>
+
+{% if images %}
+    {% for image in images %}
+        <p><a href="{{ image.get_absolute_url }}">{{ image.img.name }}</a></p>
+    {% endfor %}
+{% else %}
+    <p>Нет доступных изображений</p>
+{% endif %}
+
+<a href="{% url 'upload' %}">Добавить изображение</a>
+{% endblock %}
